@@ -34,6 +34,13 @@
                 <category android:name="com.kvest.gcmtest" />
             </intent-filter>
         </receiver>
+        <receiver android:name=".broadcastreceiver.AlternativeGcmBroadcastReceiver"
+                 android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.kvest.gcmtest" />
+            </intent-filter>
+        </receiver>
 
         <service android:name=".service.GcmIntentService" />
     </application>
